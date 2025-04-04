@@ -7,18 +7,32 @@ const ProjectsSection = styled.section`
   padding: 60px 10%;
   min-height: 100vh;
   transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    padding: 40px 5%;
+  }
 `;
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 3rem;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -31,6 +45,11 @@ const ProjectCard = styled(motion.div)`
   transition: all 0.3s ease;
   border: 1px solid rgba(33, 150, 243, 0.1);
   display: ${props => props.visible ? 'block' : 'none'};
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
   
   &:hover {
     transform: translateY(-5px);
@@ -51,6 +70,10 @@ const ProjectImage = styled.img`
               0 0 20px rgba(33, 150, 243, 0.1);
   border: 1px solid rgba(33, 150, 243, 0.1);
   
+  @media (max-width: 768px) {
+    height: 200px;
+  }
+  
   &:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15),
@@ -69,6 +92,10 @@ const SlideshowContainer = styled.div`
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1),
               0 0 20px rgba(33, 150, 243, 0.1);
   border: 1px solid rgba(33, 150, 243, 0.1);
+  
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `;
 
 const SlideshowImage = styled.img`
@@ -112,6 +139,10 @@ const ProjectContent = styled.div`
   background: white;
   position: relative;
   z-index: 2;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const ProjectTitle = styled.h3`
@@ -120,6 +151,10 @@ const ProjectTitle = styled.h3`
   color: #1a237e;
   font-weight: 600;
   transition: color 0.3s ease;
+  
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 
   ${ProjectCard}:hover & {
     color: #2196f3;
@@ -131,12 +166,21 @@ const ProjectDescription = styled.p`
   margin-bottom: 1.5rem;
   line-height: 1.6;
   font-size: 1.1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const TagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `;
 
 const Tag = styled.span`
@@ -148,6 +192,11 @@ const Tag = styled.span`
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid rgba(33, 150, 243, 0.1);
+  
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
 
   &:hover {
     background: #bbdefb;
@@ -162,6 +211,11 @@ const FilterContainer = styled.div`
   gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const FilterButton = styled.button`
@@ -174,6 +228,11 @@ const FilterButton = styled.button`
   font-size: 0.9rem;
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 0.4rem 1.2rem;
+  }
 
   &:hover {
     transform: translateY(-2px);

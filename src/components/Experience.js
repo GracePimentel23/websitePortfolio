@@ -7,12 +7,21 @@ const ExperienceSection = styled.section`
   padding: 60px 10%;
   min-height: 100vh;
   transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    padding: 40px 5%;
+  }
 `;
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 3rem;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -24,6 +33,7 @@ const ContentWrapper = styled.div`
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 `;
 
@@ -36,6 +46,10 @@ const ExperienceCard = styled(motion.div)`
               0 0 50px rgba(33, 150, 243, 0.2);
   transition: all 0.3s ease;
   border: 1px solid rgba(33, 150, 243, 0.1);
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
   
   &:hover {
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3),
@@ -50,6 +64,11 @@ const Experience = styled.div`
     color: #333;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
   }
   
   .experience-item {
@@ -57,10 +76,19 @@ const Experience = styled.div`
     padding-left: 1.5rem;
     border-left: 3px solid #007bff;
     
+    @media (max-width: 768px) {
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
     h4 {
       color: #007bff;
       margin-bottom: 0.5rem;
       font-size: 1.25rem;
+      
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+      }
     }
     
     .date {
@@ -73,8 +101,16 @@ const Experience = styled.div`
       color: #666;
       padding-left: 1.5rem;
       
+      @media (max-width: 768px) {
+        padding-left: 1rem;
+      }
+      
       li {
         margin-bottom: 0.5rem;
+        
+        @media (max-width: 768px) {
+          font-size: 0.95rem;
+        }
       }
     }
   }
@@ -85,6 +121,11 @@ const Skills = styled.div`
     color: #333;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
   }
   
   .skill-category {
@@ -94,6 +135,10 @@ const Skills = styled.div`
       color: #007bff;
       margin-bottom: 0.75rem;
       font-size: 1.25rem;
+      
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+      }
     }
   }
 `;
@@ -111,6 +156,11 @@ const SkillTag = styled.span`
   border-radius: 20px;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
   
   &:hover {
     background: #0288d1;
